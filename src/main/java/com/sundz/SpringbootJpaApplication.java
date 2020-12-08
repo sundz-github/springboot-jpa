@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Sundz
  */
 @SpringBootApplication
+//@Import(CommonServer.class)
 @Log4j2
 @EnableRabbit
 public class SpringbootJpaApplication {

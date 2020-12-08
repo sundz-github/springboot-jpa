@@ -5,7 +5,8 @@ import com.sundz.jpa.entity.User;
 import com.sundz.jpa.repository.JobRepository;
 import com.sundz.jpa.repository.UserRepository;
 import com.sundz.service.JpaServer;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.mockito.internal.util.collections.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -78,9 +79,16 @@ public class JpaSaveTest extends BaseTest{
     }
 
     @Test
-    public void save3(){
+    public void save3() {
         String t = "<H1>派拉软件必胜,中国必胜</h1>";
         jpaServer.save2();
     }
+
+    @Test
+    @DisplayName("测试")
+    public void test1() {
+        System.out.println("我是测试啊");
+    }
+
 
 }

@@ -17,6 +17,7 @@ import java.io.Serializable;
 
 /**
  * <p> 岗位实体 与数据库表cic_job_info进行映射 </p>
+ *
  * @author Sundz
  * @date $DATE $TIME
  */
@@ -42,10 +43,11 @@ public class Job implements Serializable {
     private String remark;
 
     /**
-     * @field  foreignKey  -->  指定外键的名称
+     * @field foreignKey  -->  指定外键的名称
      */
     @ManyToOne(targetEntity = User.class/*, cascade = CascadeType.ALL*/)
-    @JoinColumn(name = "user_id", referencedColumnName = "cic_user_id", foreignKey =@ForeignKey(name = "fk_job_user"))  // 建立外键关系
+    @JoinColumn(name = "user_id", referencedColumnName = "cic_user_id", foreignKey = @ForeignKey(name = "fk_job_user"))
+    // 建立外键关系
     private User user;
 
 

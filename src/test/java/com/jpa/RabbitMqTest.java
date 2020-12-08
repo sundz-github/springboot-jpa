@@ -1,16 +1,13 @@
 package com.jpa;
 
-import com.sundz.jpa.entity.Job;
-import com.sundz.jpa.entity.User;
 import lombok.extern.log4j.Log4j2;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,22 +26,22 @@ public class RabbitMqTest extends BaseTest{
     @Autowired
     private RabbitAdmin rabbitAdmin;
 
-    @Test
+    /*@Test
     public void sendJob(){
         User user = new User();
         user.setCicCity("上海");
         Date now = new Date();
-        /*DateTimeFormatter fomatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String time = now.format(fomatter);*/
+        *//*DateTimeFormatter fomatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String time = now.format(fomatter);*//*
         user.setDate(now);
         user.setCicMail("123456@163.com");
         Job job = new Job(1,"战士","超级赛尔亚人",user);
         rabbitTemplate.convertAndSend("amq1.direct","/queues1",job);
         log.info("消息发送成功!");
     }
-
+*/
     @Test
-    public void sendString(){
+    public void sendString() {
         Map<String, Object> map = new HashMap<>();
         map.put("key", 10);
         MessageProperties messageProperties = new MessageProperties();

@@ -2,11 +2,11 @@ package com.jpa;
 
 import com.sundz.SpringbootJpaApplication;
 import lombok.extern.log4j.Log4j2;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 /**
  * <p>  </p>
@@ -16,15 +16,15 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest(classes = {SpringbootJpaApplication.class})
 @Log4j2
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 public class BaseTest {
 
-    @Before
+    @BeforeEach
     public void before() {
         log.debug("<-----------------------单元测试开始执行----------------------->");
     }
 
-    @After
+    @AfterEach
     public void after() {
         log.debug("<-----------------------单元测试执行结束----------------------->");
     }
