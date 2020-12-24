@@ -1,8 +1,7 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!**/src/main/**
+!**/src/test/**
 
 ### STS ###
 .apt_generated
@@ -18,7 +17,7 @@ target/
 *.iws
 *.iml
 *.ipr
-
+.mvn
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -28,6 +27,6 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+target/
 ### VS Code ###
 .vscode/

@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/12/3 13:43
  */
 @Configuration
-
 public class BeansConfig {
 
 }
